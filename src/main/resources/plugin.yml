@@ -1,0 +1,22 @@
+name: FP_Moderation_Addon
+version: 1.0.0
+main: z.fP_Addon.FP_Addon
+api-version: '1.21'
+softdepend:
+  - FlectonePulse
+
+commands:
+  fpa:
+    description: Главная команда плагина
+    usage: /fpa reload
+
+permissions:
+  fp_addon.ban:
+    description: Позволяет использовать команду /ban
+    default: op
+  fp_addon.moderation:
+    description: Позволяет использовать /ip-alert и получать IP-уведомления
+    default: op
+  fpa.admin:
+    description: Позволяет перезагружать конфиг аддона
+    default: op

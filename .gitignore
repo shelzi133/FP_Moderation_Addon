@@ -1,0 +1,31 @@
+target/
+build/
+bin/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# Logs & Temporary files
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+

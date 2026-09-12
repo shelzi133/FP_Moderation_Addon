@@ -1,0 +1,33 @@
+also-banip:
+  enabled: false
+
+also-ban-all-account:
+  enabled: false
+
+ip-alert:
+  enabled: false
+
+messages:
+  no-permission: "&#FF5555У тебя нет прав на выполнение этой команды."
+  console-only: "&#FF5555Эту команду нельзя выполнить из консоли."
+  flectonepulse-not-ready: "&#FF5555FlectonePulse ещё не готов, попробуй позже."
+
+  player-not-found: "&#FF5555Игрок &#FFFFFF%player% &#FF5555не найден."
+  ban-usage: "&#FFAA00Использование: /ban <ник> [причина]"
+  ban-success: "&#55FF55Игрок &#FFFFFF%player% &#55FF55забанен. Причина: &#FFFFFF%reason%"
+  ban-broadcast: "&#FF5555%player% &#FFFFFFбыл забанен модератором &#FFFFFF%moderator%&#FFFFFF. Причина: &#FFAAAA%reason%"
+  ban-kick-message: "&#FF0000Вы были забанены!\n&#FFAAAAПричина: &#FFFFFF%reason%"
+
+  banip-also-banned: "&#FFAA00Дополнительно забанено аккаунтов с этого IP: &#FFFFFF%count%"
+  banip-ip-blocked: "&#FFAA00IP &#FFFFFF%ip% &#FFAA00добавлен в чёрный список и заблокирован для новых входов."
+  banip-ip-blocked-kick: "&#FF0000Твой IP-адрес заблокирован администрацией сервера."
+
+  unbanip-also-unbanned: "&#55FF55Дополнительно разбанено аккаунтов с этого IP: &#FFFFFF%count%"
+  unbanip-ip-unblocked: "&#55FF55IP &#FFFFFF%ip% &#55FF55убран из чёрного списка."
+
+  ip-alert-enabled: "&#55FF55Уведомления о заходе с одного IP включены."
+  ip-alert-disabled: "&#FF5555Уведомления о заходе с одного IP выключены."
+  ip-alert-notify: "&#FFAA00[IP-Alert]&#FFFFFF %player% &#FFAA00зашёл(ла) с IP-адреса, который уже использовали другие аккаунты &#FFFFFF(всего аккаунтов с этим IP: %accounts%)"
+
+  reload-success: "&#55FF55Конфигурация FP_Addon успешно перезагружена."
+  reload-no-permission: "&#FF5555У тебя нет прав на перезагрузку конфигурации."
