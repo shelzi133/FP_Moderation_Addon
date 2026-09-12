@@ -20,12 +20,12 @@ public class FpaCommand implements CommandExecutor {
                               @NotNull String label, String[] args) {
 
         if (args.length == 0 || !args[0].equalsIgnoreCase("reload")) {
-            sender.sendMessage(HEXColor.colorize("Использование: /fp-addon reload"));
+            sender.sendMessage(HEXColor.colorize("&cИспользование: /fpa reload"));
             return true;
         }
 
         if (!sender.hasPermission("fpa.admin")) {
-            sender.sendMessage(HEXColor.colorize(plugin.getFpConfig().raw("reload-no-permission")));
+            sender.sendMessage(HEXColor.colorize(plugin.getFpConfig().raw("no-permission")));
             return true;
         }
 

@@ -10,7 +10,6 @@ import net.flectone.pulse.model.event.message.context.MessageContext;
 import net.flectone.pulse.model.event.message.context.ModerationMessageContext;
 import net.flectone.pulse.model.event.player.PlayerPreLoginEvent;
 import net.flectone.pulse.model.value.Moderation;
-import net.flectone.pulse.platform.adapter.PlatformPlayerAdapter;
 import net.flectone.pulse.platform.sender.MessageSender;
 import net.flectone.pulse.service.FPlayerService;
 import net.flectone.pulse.service.ModerationService;
@@ -67,7 +66,6 @@ public class BanListener implements PulseListener {
 
         FPlayerService fPlayerService = flectonePulse.get(FPlayerService.class);
         ModerationService moderationService = flectonePulse.get(ModerationService.class);
-        PlatformPlayerAdapter platformPlayerAdapter = flectonePulse.get(PlatformPlayerAdapter.class);
         MessageSender messageSender = flectonePulse.get(MessageSender.class);
 
         FPlayer target = fPlayerService.getFPlayer(moderation.player());
@@ -86,7 +84,7 @@ public class BanListener implements PulseListener {
 
         if (config.isAlsoBanAllAccountEnabled()) {
             extraBanned = banAllKnownAccountsWithIp(
-                    fPlayerService, moderationService, platformPlayerAdapter,
+                    fPlayerService, moderationService,
                     target, targetIp, reason, moderation.moderator(), moderation.time()
             );
         }
@@ -109,8 +107,7 @@ public class BanListener implements PulseListener {
     }
 
     private int banAllKnownAccountsWithIp(FPlayerService fPlayerService, ModerationService moderationService,
-                                           PlatformPlayerAdapter platformPlayerAdapter, FPlayer excluded,
-                                           String ip, String reason, int moderatorId, long until) {
+                                          FPlayer excluded, String ip, String reason, int moderatorId, long until) {
         int banned = 0;
 
         List<FPlayer> accounts = fPlayerService.getFPlayersByIp(ip);
@@ -124,11 +121,6 @@ public class BanListener implements PulseListener {
             if (result == null) continue;
 
             banned++;
-
-            if (account.isOnline()) {
-                String kickText = config.message("ban-kick-message", "%reason%", reason);
-                platformPlayerAdapter.kick(account, PulseHEXColor.colorize(kickText));
-            }
         }
 
         return banned;

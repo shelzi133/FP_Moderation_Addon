@@ -8,26 +8,21 @@ ip-alert:
   enabled: false
 
 messages:
-  no-permission: "&#FF5555У тебя нет прав на выполнение этой команды."
-  console-only: "&#FF5555Эту команду нельзя выполнить из консоли."
-  flectonepulse-not-ready: "&#FF5555FlectonePulse ещё не готов, попробуй позже."
+  no-permission: "&#FF7171&l⁉ &fУ тебя нет прав на выполнение этой команды."
+  console-only: "&#FF7171&l⁉ &fЭту команду нельзя выполнить из консоли."
+  flectonepulse-not-ready: "&#FF7171&l⁉ &fFlectonePulse ещё не готов, попробуй позже."
 
-  player-not-found: "&#FF5555Игрок &#FFFFFF%player% &#FF5555не найден."
-  ban-usage: "&#FFAA00Использование: /ban <ник> [причина]"
-  ban-success: "&#55FF55Игрок &#FFFFFF%player% &#55FF55забанен. Причина: &#FFFFFF%reason%"
-  ban-broadcast: "&#FF5555%player% &#FFFFFFбыл забанен модератором &#FFFFFF%moderator%&#FFFFFF. Причина: &#FFAAAA%reason%"
-  ban-kick-message: "&#FF0000Вы были забанены!\n&#FFAAAAПричина: &#FFFFFF%reason%"
+  player-not-found: "&#FF7171&l⁉ &fИгрок &#FFD587%player% &fне найден."
 
-  banip-also-banned: "&#FFAA00Дополнительно забанено аккаунтов с этого IP: &#FFFFFF%count%"
-  banip-ip-blocked: "&#FFAA00IP &#FFFFFF%ip% &#FFAA00добавлен в чёрный список и заблокирован для новых входов."
+  banip-also-banned: "&#FFDF72⚠ &fДополнительно забанено аккаунтов с этого IP: &#FFD587%count%"
+  banip-ip-blocked: "&#FFDF72⚠ &fIP &#FFD587%ip% &fзаблокирован."
   banip-ip-blocked-kick: "&#FF0000Твой IP-адрес заблокирован администрацией сервера."
 
-  unbanip-also-unbanned: "&#55FF55Дополнительно разбанено аккаунтов с этого IP: &#FFFFFF%count%"
-  unbanip-ip-unblocked: "&#55FF55IP &#FFFFFF%ip% &#55FF55убран из чёрного списка."
+  unbanip-also-unbanned: "&#FFDF72⚠ &fДополнительно разбанено аккаунтов с этого IP: &#FFD587%count%"
+  unbanip-ip-unblocked: "&#FFDF72⚠ &fIP &#FFD587%ip% &fубран из чёрного списка."
 
-  ip-alert-enabled: "&#55FF55Уведомления о заходе с одного IP включены."
-  ip-alert-disabled: "&#FF5555Уведомления о заходе с одного IP выключены."
-  ip-alert-notify: "&#FFAA00[IP-Alert]&#FFFFFF %player% &#FFAA00зашёл(ла) с IP-адреса, который уже использовали другие аккаунты &#FFFFFF(всего аккаунтов с этим IP: %accounts%)"
+  ip-alert-enabled: "&#98fb98&l✔ &fУведомления о заходе с одного IP &#FFD587включены."
+  ip-alert-disabled: "&#98fb98&l✔ &fУведомления о заходе с одного IP &#9BCF51выключены."
+  ip-alert-notify: "&#FFDF72⚠ &fИгрок &#9BCF51%player% &fзашёл с IP-адреса, который уже использовали другие аккаунты &7(Аккаунтов: %accounts%)"
 
-  reload-success: "&#55FF55Конфигурация FP_Addon успешно перезагружена."
-  reload-no-permission: "&#FF5555У тебя нет прав на перезагрузку конфигурации."
+  reload-success: "&#98fb98&l✔ &fКонфигурация плагина успешно перезагружена!."
